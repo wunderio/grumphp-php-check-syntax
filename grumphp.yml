@@ -1,0 +1,9 @@
+parameters:
+    git_dir: .
+    bin_dir: vendor/bin
+    tasks:
+        php_check_syntax:
+            exclude: []
+            triggered_by: [php, inc, module, phtml, php3, php4, php5]
+    extensions:
+        - hkirsman\PhpCheckSyntaxTask\ExtensionLoader

@@ -1,0 +1,18 @@
+{
+    "name": "hkirsman/grumphp-php-check-syntax",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Hannes Kirsman",
+            "email": "hkirsman@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "hkirsman\\PhpCheckSyntaxTask\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.6"
+    }
+}
