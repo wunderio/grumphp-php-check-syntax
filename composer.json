@@ -1,5 +1,5 @@
 {
-    "name": "hkirsman/grumphp-php-check-syntax",
+    "name": "wunderio/grumphp-php-check-syntax",
     "type": "library",
     "authors": [
         {
@@ -9,7 +9,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "hkirsman\\PhpCheckSyntaxTask\\": "src/"
+            "wunderio\\PhpCheckSyntaxTask\\": "src/"
         }
     },
     "require": {

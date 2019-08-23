@@ -6,4 +6,4 @@ parameters:
             exclude: []
             triggered_by: [php, inc, module, phtml, php3, php4, php5]
     extensions:
-        - hkirsman\PhpCheckSyntaxTask\ExtensionLoader
+        - wunderio\PhpCheckSyntaxTask\ExtensionLoader

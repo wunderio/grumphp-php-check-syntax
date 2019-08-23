@@ -1,5 +1,5 @@
 <?php
-namespace hkirsman\PhpCheckSyntaxTask;
+namespace wunderio\PhpCheckSyntaxTask;
 use GrumPHP\Extension\ExtensionInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;
@@ -7,7 +7,7 @@ use Symfony\Component\DependencyInjection\Reference;
  * Class ExtensionLoader
  *
  * @author Hannes Kirsman <hkirsman@gmail.com>
- * @package hkirsman\PhpCheckSyntaxTask
+ * @package wunderio\PhpCheckSyntaxTask
  */
 class ExtensionLoader implements ExtensionInterface
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace hkirsman\PhpCheckSyntaxTask;
+namespace wunderio\PhpCheckSyntaxTask;
 
 use GrumPHP\Runner\TaskResult;
 use GrumPHP\Runner\TaskResultInterface;

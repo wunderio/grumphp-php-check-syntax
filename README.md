@@ -10,9 +10,9 @@ parameters:
             exclude: []
             triggered_by: [php, inc, module, phtml, php3, php4, php5]
     extensions:
-        - hkirsman\PhpCheckSyntaxTask\ExtensionLoader
+        - wunderio\PhpCheckSyntaxTask\ExtensionLoader
 ````
 
 ### Composer
 
-``composer require --dev hkirsman/grumphp-php-check-syntax``
+``composer require --dev wunderio/grumphp-php-check-syntax``
