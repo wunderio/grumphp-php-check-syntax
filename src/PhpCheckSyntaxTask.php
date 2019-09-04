@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace wunderio\PhpCheckSyntaxTask;
 
+use GrumPHP\Collection\FilesCollection;
 use GrumPHP\Runner\TaskResult;
 use GrumPHP\Runner\TaskResultInterface;
 use GrumPHP\Task\Context\ContextInterface;
@@ -47,16 +48,19 @@ class PhpCheckSyntaxTask extends AbstractExternalTask
         return TaskResult::createSkipped($this, $context);
       }
 
-      $arguments = $this->processBuilder->createArgumentsForCommand('php');
-        $arguments->add('-l');
-        $arguments->addFiles($files);
+        foreach ($files as $file) {
+            $files_collection = new FilesCollection([$file]);
+            $arguments = $this->processBuilder->createArgumentsForCommand('php');
+            $arguments->add('-l');
+            $arguments->addFiles($files_collection);
 
-        $process = $this->processBuilder->buildProcess($arguments);
-        $process->run();
+            $process = $this->processBuilder->buildProcess($arguments);
+            $process->run();
 
-        if (!$process->isSuccessful()) {
-            $output = $this->formatter->format($process);
-            return TaskResult::createFailed($this, $context, $output);
+            if (!$process->isSuccessful()) {
+                $output = $this->formatter->format($process);
+                return TaskResult::createFailed($this, $context, $output);
+            }
         }
 
         return TaskResult::createPassed($this, $context);
